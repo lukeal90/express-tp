@@ -1,0 +1,1 @@
+[{"title":"Heladera Gafa","price":80000,"thumbnail":"https://imageLink.png","id":1},{"title":"Television Led","price":150000,"thumbnail":"https://imageLink.png","id":2},{"title":"Cafetera Oster","price":62000,"thumbnail":"https://imageLink.png","id":3}]
