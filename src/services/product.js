@@ -14,6 +14,11 @@ class ProductService{
         }
         return productos;
     }
+
+    static async getById() {
+        const productos = await this.getAll();
+        return productos.find(producto => producto.id === id) || null;
+    }    
 }
 
 module.exports = ProductService;

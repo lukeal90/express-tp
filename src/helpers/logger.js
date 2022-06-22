@@ -51,30 +51,29 @@ const getTransports = () => {
     ];
 
     
-    transportOpts.push(
-        new Stream({
-            format,
-            stream: fs.createWriteStream(`/tmp/${packageJson.name.replace('-', '_')}_info.log`,
-                {
-                    encoding: 'utf8',
-                    flags: 'a'
-                })
-        })
-    );
-    transportOpts.push(
-        new Stream({
-            level: 'error',
-            format,
-            stream: fs.createWriteStream(`/tmp/${packageJson.name.replace('-', '_')}_error.log`,
-                {
-                    encoding: 'utf8',
-                    flags: 'a'
-                }
-            )
-        })
-    );
+    // transportOpts.push(
+    //     new Stream({
+    //         format,
+    //         stream: fs.createWriteStream(`/tmp/${packageJson.name.replace('-', '_')}_info.log`,
+    //             {
+    //                 encoding: 'utf8',
+    //                 flags: 'a'
+    //             })
+    //     })
+    // );
+    // transportOpts.push(
+    //     new Stream({
+    //         level: 'error',
+    //         format,
+    //         stream: fs.createWriteStream(`/tmp/${packageJson.name.replace('-', '_')}_error.log`,
+    //             {
+    //                 encoding: 'utf8',
+    //                 flags: 'a'
+    //             }
+    //         )
+    //     })
+    // );
     
-
     return transportOpts;
 };
 

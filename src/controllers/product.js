@@ -25,6 +25,42 @@ class ProductController {
             console.log("Algo salio mal al obtener un producto random : " + error.message);
         }
     }    
+
+    static async getById(req, res) {
+        try {
+            let producto = await ProductService.getById(req.params.id);
+            res.send(producto);
+        } catch (error) {
+            console.log("Algo salio mal al obtener los productos : " + error.message);
+        }
+    }
+
+    static async addProduct(req, res) {
+        try {
+            let productos = await ProductService.getAll();
+            res.send(productos);
+        } catch (error) {
+            console.log("Algo salio mal al obtener los productos : " + error.message);
+        }
+    }
+    
+    static async updateProduct(req, res) {
+        try {
+            let productos = await ProductService.getAll();
+            res.send(productos);
+        } catch (error) {
+            console.log("Algo salio mal al obtener los productos : " + error.message);
+        }
+    }
+    
+    static async deleteProduct(req, res) {
+        try {
+            let productos = await ProductService.getAll();
+            res.send(productos);
+        } catch (error) {
+            console.log("Algo salio mal al obtener los productos : " + error.message);
+        }
+    }    
 }
 
 module.exports = ProductController;
