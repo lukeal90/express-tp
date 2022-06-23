@@ -28,8 +28,8 @@ class ProductController {
 
     static async getById(req, res) {
         try {
-            let producto = await ProductService.getById(req.params.id);
-            res.send(producto);
+            let response = await ProductService.getById(req.params.id);
+            res.send(response);
         } catch (error) {
             console.log("Algo salio mal al obtener los productos : " + error.message);
         }
@@ -37,8 +37,8 @@ class ProductController {
 
     static async addProduct(req, res) {
         try {
-            let productos = await ProductService.getAll();
-            res.send(productos);
+            let response = await ProductService.addProduct(req.body);
+            res.send(response);
         } catch (error) {
             console.log("Algo salio mal al obtener los productos : " + error.message);
         }
@@ -46,8 +46,8 @@ class ProductController {
     
     static async updateProduct(req, res) {
         try {
-            let productos = await ProductService.getAll();
-            res.send(productos);
+            let response = await ProductService.updateProduct(req.body, req.params.id);
+            res.send(response);
         } catch (error) {
             console.log("Algo salio mal al obtener los productos : " + error.message);
         }
